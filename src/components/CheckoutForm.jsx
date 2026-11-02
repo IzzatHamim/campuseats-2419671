@@ -21,7 +21,7 @@ function CheckoutForm({ onPlaceOrder }) {
  event.preventDefault() // stop the page reloading
  const found = validate(values)
  setErrors(found)
- // TODO: if found has no keys, call onPlaceOrder(values)
+ if (Object.keys(found).length === 0) onPlaceOrder(values)
  }
 
   return (

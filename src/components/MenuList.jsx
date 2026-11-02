@@ -1,8 +1,15 @@
-import { useState } from 'react'
+import { useSearchParams } from 'react-router'
 import MenuItemCard from './MenuItemCard.jsx'
+import { useCart } from '../hooks/useCart.js'
 
-function MenuList({ items, onAdd }) {
- const [selectedCategory, setSelectedCategory] = useState('All')
+function MenuList({ items }) {
+ const { addToCart } = useCart()
+ const [searchParams, setSearchParams] = useSearchParams()
+ const selectedCategory = searchParams.get('cat') ?? 'All'
+
+ function setSelectedCategory(category) {
+  setSearchParams(category === 'All' ? {} : { cat: category })
+ }
 
  const categories = ['All', ...new Set(items.map((item) => item.category))]
 
@@ -31,7 +38,7 @@ function MenuList({ items, onAdd }) {
 
  <div className="grid">
  {visibleItems.map((item) => (
- <MenuItemCard key={item.id} item={item} onAdd={onAdd} />
+ <MenuItemCard key={item.id} item={item} onAdd={addToCart} />
  ))}
  </div>
  </>

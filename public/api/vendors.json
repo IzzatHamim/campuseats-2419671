@@ -14,7 +14,7 @@
     {"id": "2419671-m5","name": "Laksa Penang","price": 7,"category": "Noodles","available": true},
     {"id": "2419671-m6","name": "Nasi Kerabu","price": 7.5,"category": "Rice","available": true},
     {"id": "2419671-m7","name": "Teh Tarik","price": 2.5,"category": "Drinks","available": true},
-    {"id": "2419671-m8","name": "Cendol","price": 4,"category": "Desserts","available": false}
+    {"id": "2419671-m8","name": "Cendol","price": 4,"category": "Desserts","available": true}
     ]
   },
   {
