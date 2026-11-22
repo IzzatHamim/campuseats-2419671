@@ -41,7 +41,7 @@
   "openHours": "8:00 am - 10:00 pm",
   "isOpen": true,
   "menu": [
-    { "id": "2419091-m1", "name": "Lanzhou Beef Mee Tarik", "price": 12, "category": "Noodles", "": true },
+    { "id": "2419091-m1", "name": "Lanzhou Beef Mee Tarik", "price": 12, "category": "Noodles", "available": true },
     { "id": "2419091-m2", "name": "Spicy Beef Mee Tarik", "price": 13, "category": "Noodles", "available": true },
     { "id": "2419091-m3", "name": "Chicken Mee Tarik", "price": 10, "category": "Noodles", "available": true },
     { "id": "2419091-m4", "name": "Fried Mee Tarik", "price": 11, "category": "Noodles", "available": false },

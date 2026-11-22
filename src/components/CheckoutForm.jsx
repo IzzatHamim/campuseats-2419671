@@ -9,8 +9,8 @@ function validate(values) {
  if (values.pickupTime < '07:00' || values.pickupTime > '22:00') errors.pickupTime = 'Pickup time must be between 07:00 and 22:00.'
  return errors
 }
-function CheckoutForm({ onPlaceOrder }) {
- const [values, setValues] = useState({ name: '', mahallah: '', pickupTime: '' })
+function CheckoutForm({ defaultName = '', onPlaceOrder }) {
+ const [values, setValues] = useState({ name: defaultName, mahallah: '', pickupTime: '' })
  const [errors, setErrors] = useState({})
  // One handler for every input: the input's name matches a key in values.
  function handleChange(event) {
