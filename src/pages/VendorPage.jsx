@@ -1,4 +1,4 @@
-import { useParams } from 'react-router'
+import { Link, useParams } from 'react-router'
 import MenuList from '../components/MenuList.jsx'
 import { useVendors } from '../hooks/useVendors.js'
 
@@ -21,7 +21,7 @@ function VendorPage() {
 
  const vendor = vendors.find((v) => v.id === id)
 
- if (!vendor) return <p className="muted">Vendor not found</p>
+ if (!vendor) return <p className="muted">Vendor not found. <Link to="/">Back to vendors</Link></p>
 
  return (
   <section>
